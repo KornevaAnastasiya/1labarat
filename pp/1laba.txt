@@ -1,0 +1,300 @@
+Задание 5
+Microsoft Windows [Version 10.0.19045.4780]
+(c) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+Z:\ОССТ_2024-2025\1-МД-8\Корнева Анастасия>copy/?>spravochka1.txt,xcopy/?>spravochka2.txt,dir/?>spravochka3.txt
+
+Z:\ОССТ_2024-2025\1-МД-8\Корнева Анастасия>copy/?>spravka1.txt
+
+Z:\ОССТ_2024-2025\1-МД-8\Корнева Анастасия>xcopy/?spravka2.txt
+Недопустимый параметр: /?spravka2.txt
+
+Z:\ОССТ_2024-2025\1-МД-8\Корнева Анастасия>copy /? > spravka1.txt
+
+Z:\ОССТ_2024-2025\1-МД-8\Корнева Анастасия>xcopy /? > spravka2.txt
+
+Z:\ОССТ_2024-2025\1-МД-8\Корнева Анастасия>dir /? > spravka3.txt
+
+Z:\ОССТ_2024-2025\1-МД-8\Корнева Анастасия>copy spravka1.txt+spravka2.txt+spravka3.txt spravka.txt
+spravka1.txt
+spravka2.txt
+spravka3.txt
+Скопировано файлов:         1.
+
+Z:\ОССТ_2024-2025\1-МД-8\Корнева Анастасия>type spravka.txt
+Копирование одного или нескольких файлов в другое место.
+
+COPY [/D] [/V] [/N] [/Y | /-Y] [/Z] [/L] [/A | /B] источник [/A | /B]
+     [+ источник [/A | /B] [+ ...]] [результат [/A | /B]]
+
+  источник     Имена одного или нескольких копируемых файлов.
+  /A           Файл является текстовым файлом ASCII.
+  /B           Файл является двоичным файлом.
+  /D           Указывает на возможность создания зашифрованного файла
+  результат    Каталог и/или имя для конечных файлов.
+  /V           Проверка правильности копирования файлов.
+  /N           Использование, если возможно, коротких имен при копировании
+               файлов, чьи имена не удовлетворяют стандарту 8.3.
+  /Y           Подавление запроса подтверждения на перезапись существующего
+               конечного файла.
+  /-Y          Обязательный запрос подтверждения на перезапись существующего
+               конечного файла.
+  /Z           Копирование сетевых файлов с возобновлением.
+  /L           Если источник является символической ссылкой, копирование
+               ссылки вместо реального файла, на который указывает ссылка.
+
+Ключ /Y можно установить через переменную среды COPYCMD.
+Ключ /-Y командной строки переопределяет такую установку.
+По умолчанию требуется подтверждение, если только команда COPY
+не выполняется в пакетном файле.
+
+Чтобы объединить файлы, укажите один конечный и несколько исходных файлов,
+используя подстановочные знаки или формат "файл1+файл2+файл3+...".
+Копирует файлы и деревья папок.
+
+XCOPY источник [destination] [/A | /M] [/D[:date]] [/P] [/S [/E]] [/V] [/W]
+                           [/C] [/I] [/Q] [/F] [/L] [/G] [/H] [/R] [/T] [/U]
+                           [/K] [/N] [/O] [/X] [/Y] [/-Y] [/Z] [/B] [/J]
+                           [/EXCLUDE:file1[+file2][+file3]...] [/COMPRESS]
+
+  source       Копируемые файлы.
+  destination  Расположение или имена новых файлов.
+  /A           Копирует только файлы с установленным атрибутом архивации;
+               сам атрибут при этом не изменяется.
+  /M           Копирует только файлы с установленным атрибутом архивации;
+               после копирования атрибут снимается.
+  /D:m-d-y     Копирует файлы, измененные не ранее указанной даты.
+               Если дата не указана, заменяются только конечные файлы
+               с более ранней датой, чем у исходных файлов.
+  /EXCLUDE:file1[+file2][+file3]...
+               Список файлов, содержащих строки.  Каждая строка
+               должна располагаться в отдельной строке в файлах. Если какая-либо
+               из строк совпадает с любой частью абсолютного пути к копируемому
+               файлу, такой файл исключается из операции копирования.  Например,
+               при указании строки \obj\ или .obj будут исключены
+               все файлы из каталога obj или все файлы с расширением
+               OBJ соответственно.
+  /P           Выводит запросы перед созданием каждого конечного файла.
+  /S           Копирует только непустые каталоги с подкаталогами.
+  /E           Копирует каталоги с подкаталогами, включая пустые.
+               Эквивалент сочетания параметров /S /E. Совместим с параметром /T.
+  /V           Проверяет размер каждого нового файла.
+  /W           Выводит запрос на нажатие клавиши перед копированием.
+  /C           Продолжает копирование вне зависимости от наличия ошибок.
+  /I           Если назначение не существует и копируется несколько файлов,
+               считается, что местом назначения является каталог.
+  /Q           Запрещает вывод имен копируемых файлов.
+  /F           Выводит полные имена исходных и конечных файлов во время копирования.
+  /L           Выводит копируемые файлы.
+  /G           Копирует зашифрованные файлы в конечную папку,
+               не поддерживающую шифрование.
+  /H           Копирует скрытые и системные файлы (среди прочих).
+  /R           Разрешает замену файлов, предназначенных только для чтения.
+  /T           Создает структуру каталогов (кроме пустых каталогов)
+               без копирования файлов. Для создания пустых каталогов и подкаталогов
+               используйте сочетание параметров /T /E.
+  /U           Копирует только файлы, уже имеющиеся в конечной папке.
+  /K           Копирует атрибуты. При использовании команды XСOPY обычно сбрасываются атрибуты "только для чтения".
+  /N           Использует короткие имена при копировании.
+  /O           Копирует сведения о владельце и данные ACL.
+  /X           Копирует параметры аудита файлов (требуется параметр /O).
+  /Y           Подавляет запрос на подтверждение перезаписи
+               существующего конечного файла.
+  /-Y          Обязательный запрос на подтверждение перезаписи
+               существующего конечного файла.
+  /Z           Копирует сетевые файлы с возобновлением.
+  /B           Копирует символьную ссылку вместо ее целевого объекта.
+  /J           Копирует с использованием ввода-вывода без буферизации. Рекомендуется для очень больших файлов.
+  /COMPRESS    Запрос на сетевое сжатие во время передачи файла, если
+               применимо.
+
+Параметр /Y можно установить заранее через переменную среды COPYCMD.
+Параметр /-Y командной строки переопределяет такую установку.
+Вывод списка файлов и подкаталогов в указанном каталоге.
+
+DIR [drive:][path][filename] [/A[[:]attributes]] [/B] [/C] [/D] [/L] [/N]
+  [/O[[:]sortorder]] [/P] [/Q] [/R] [/S] [/T[[:]timefield]] [/W] [/X] [/4]
+
+  [drive:][path][filename]
+              Диск, каталог или имена файлов для включения в список.
+
+  /A          Отображение файлов с указанными атрибутами.
+  атрибуты   D  Каталоги.                R  Файлы, доступные только для чтения
+               H  Скрытые файлы               A  Файлы, готовые для архивирования
+               S  Системные файлы               I  Файлы с неиндексированным содержимым
+               L  Точки повторной обработки             O  Автономные файлы
+               -  Префикс "-" имеет значение НЕ
+  /B          Вывод только имен файлов.
+  /C          Применение разделителя групп разрядов при выводе размеров файлов.
+              Используется по умолчанию.  Чтобы отключить применение разделителя групп разрядов, задайте ключ /-C.
+  /D          Вывод списка в нескольких столбцах с сортировкой по столбцам.
+  /L          Использовать нижний регистр.
+  /N          Новый формат длинного списка, имена файлов выводятся в крайнем правом столбце.
+  /O          Сортировка списка отображаемых файлов.
+  sortorder    N  По имени (по алфавиту)       S  По размеру (начиная с минимального)
+               E  По расширению (по алфавиту)  D  По дате и времени (начиная с самого старого)
+               G  Начать список с каталогов    -  Префикс "-" обращает порядок
+  /P          Пауза после заполнения каждого экрана.
+  /Q          Вывод сведений о владельце файла.
+  /R          Отображение альтернативных потоков данных этого файла.
+  /S          Отображение файлов из указанного каталога и всех его подкаталогов.
+  /T          Выбор поля времени для сортировки.
+  timefield   C  Создание
+              A  Последнее использование
+              W  Последнее изменение
+  /W          Вывод списка в несколько столбцов.
+  /X          Отображение коротких имен для файлов, чьи имена не соответствуют стандарту 8.3.
+              Формат аналогичен выводу с ключом /N, но короткие
+              имена файлов выводятся слева от длинных. Если короткого имени у
+              файла нет, вместо него выводятся пробелы.
+  /4          Вывод номера года в четырехзначном формате
+
+Стандартный набор ключей можно записать в переменную среды DIRCMD.  Для отмены
+их действия введите в команде те же ключи с префиксом "-", например: /-W.
+
+Z:\ОССТ_2024-2025\1-МД-8\Корнева Анастасия>
+
+Задание 6
+Microsoft Windows [Version 10.0.22631.4169]
+(c) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+D:\Новая папка>dir c:\windows /a:-ds >task6.txt
+
+D:\Новая папка>type task6.txt
+ Том в устройстве C не имеет метки.
+ Серийный номер тома: C2C3-03A5
+
+ Содержимое папки c:\windows
+
+19.09.2024  10:28            67 584 bootstat.dat
+               1 файлов         67 584 байт
+               0 папок  158 137 982 976 байт свободно
+
+D:\Новая папка>
+
+
+
+Задание 7
+D:\>xcopy c:\windows\*.bmp & xcopy c:\windows\*.jpg & xcopy c:\windows\*.gif D:\WinGrafika/s
+Не найден файл: *.bmp
+Скопировано файлов: 0.
+Не найден файл: *.jpg
+Скопировано файлов: 0.
+Что означает D:\WinGrafika:
+имя файла или каталога
+(F = файл, D = каталог)? D
+C:\windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETWebAdminFiles\Images\alert_lrg.gif
+C:\windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETWebAdminFiles\Images\aspx_file.gif
+C:\windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETWebAdminFiles\Images\branding_Full2.gif
+C:\windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETWebAdminFiles\Images\deselectedTab_1x1.gif
+C:\windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETWebAdminFiles\Images\folder.gif
+C:\windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETWebAdminFiles\Images\gradient_onBlue.gif
+C:\windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETWebAdminFiles\Images\gradient_onWhite.gif
+C:\windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETWebAdminFiles\Images\headerGRADIENT_Tall.gif
+C:\windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETWebAdminFiles\Images\HelpIcon_solid.gif
+C:\windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETWebAdminFiles\Images\image1.gif
+C:\windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETWebAdminFiles\Images\image2.gif
+C:\windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETWebAdminFiles\Images\requiredBang.gif
+C:\windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETWebAdminFiles\Images\selectedTab_1x1.gif
+C:\windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETWebAdminFiles\Images\selectedTab_leftCorner.gif
+C:\windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETWebAdminFiles\Images\selectedTab_rightCorner.gif
+C:\windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETWebAdminFiles\Images\unSelectedTab_leftCorner.gif
+C:\windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETWebAdminFiles\Images\unSelectedTab_rightCorner.gif
+C:\windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETWebAdminFiles\Images\yellowCORNER.gif
+C:\windows\Microsoft.NET\Framework64\v4.0.30319\ASP.NETWebAdminFiles\Images\alert_lrg.gif
+C:\windows\Microsoft.NET\Framework64\v4.0.30319\ASP.NETWebAdminFiles\Images\alert_sml.gif
+C:\windows\Microsoft.NET\Framework64\v4.0.30319\ASP.NETWebAdminFiles\Images\aspx_file.gif
+C:\windows\Microsoft.NET\Framework64\v4.0.30319\ASP.NETWebAdminFiles\Images\branding_Full2.gif
+C:\windows\Microsoft.NET\Framework64\v4.0.30319\ASP.NETWebAdminFiles\Images\deselectedTab_1x1.gif
+C:\windows\Microsoft.NET\Framework64\v4.0.30319\ASP.NETWebAdminFiles\Images\folder.gif
+C:\windows\Microsoft.NET\Framework64\v4.0.30319\ASP.NETWebAdminFiles\Images\gradient_onBlue.gif
+C:\windows\Microsoft.NET\Framework64\v4.0.30319\ASP.NETWebAdminFiles\Images\gradient_onWhite.gif
+C:\windows\Microsoft.NET\Framework64\v4.0.30319\ASP.NETWebAdminFiles\Images\headerGRADIENT_Tall.gif
+C:\windows\Microsoft.NET\Framework64\v4.0.30319\ASP.NETWebAdminFiles\Images\HelpIcon_solid.gif
+C:\windows\Microsoft.NET\Framework64\v4.0.30319\ASP.NETWebAdminFiles\Images\image1.gif
+C:\windows\Microsoft.NET\Framework64\v4.0.30319\ASP.NETWebAdminFiles\Images\image2.gif
+C:\windows\Microsoft.NET\Framework64\v4.0.30319\ASP.NETWebAdminFiles\Images\requiredBang.gif
+C:\windows\Microsoft.NET\Framework64\v4.0.30319\ASP.NETWebAdminFiles\Images\selectedTab_1x1.gif
+C:\windows\Microsoft.NET\Framework64\v4.0.30319\ASP.NETWebAdminFiles\Images\selectedTab_leftCorner.gif
+C:\windows\Microsoft.NET\Framework64\v4.0.30319\ASP.NETWebAdminFiles\Images\selectedTab_rightCorner.gif
+C:\windows\Microsoft.NET\Framework64\v4.0.30319\ASP.NETWebAdminFiles\Images\unSelectedTab_leftCorner.gif
+C:\windows\Microsoft.NET\Framework64\v4.0.30319\ASP.NETWebAdminFiles\Images\unSelectedTab_rightCorner.gif
+C:\windows\Microsoft.NET\Framework64\v4.0.30319\ASP.NETWebAdminFiles\Images\yellowCORNER.gif
+C:\windows\System32\@facial-recognition-windows-hello.gif
+C:\windows\SystemApps\Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy\media\CortanaAnimation.gif
+C:\windows\SystemApps\Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy\media\CortanaAnimationJa.gif
+C:\windows\SystemApps\Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy\media\HelloFaceAnimation.gif
+C:\windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\Cortana.UI\Assets\search.gif
+C:\windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\media\HelloFaceAnimation.gif
+C:\windows\WinSxS\amd64_microsoft-windows-a..ncredentialprovider_31bf3856ad364e35_10.0.22621.3958_none_4aaf62ef9e9d827c\@facial-recognition-windows-hello.gif
+C:\windows\WinSxS\amd64_microsoft-windows-c..riencehost.appxmain_31bf3856ad364e35_10.0.22621.3227_none_e2b539dfc9257393\CortanaAnimation.gif
+C:\windows\WinSxS\amd64_microsoft-windows-c..riencehost.appxmain_31bf3856ad364e35_10.0.22621.3227_none_e2b539dfc9257393\CortanaAnimationJa.gif
+C:\windows\WinSxS\amd64_microsoft-windows-c..riencehost.appxmain_31bf3856ad364e35_10.0.22621.3227_none_e2b539dfc9257393\HelloFaceAnimation.gif
+C:\windows\WinSxS\amd64_microsoft-windows-c..riencehost.appxmain_31bf3856ad364e35_10.0.22621.3958_none_e26c7481c95b9cd0\CortanaAnimation.gif
+C:\windows\WinSxS\amd64_microsoft-windows-c..riencehost.appxmain_31bf3856ad364e35_10.0.22621.3958_none_e26c7481c95b9cd0\CortanaAnimationJa.gif
+C:\windows\WinSxS\amd64_microsoft-windows-c..riencehost.appxmain_31bf3856ad364e35_10.0.22621.3958_none_e26c7481c95b9cd0\HelloFaceAnimation.gif
+C:\windows\WinSxS\amd64_microsoft-windows-c..riencehost.appxmain_31bf3856ad364e35_10.0.22621.4111_none_e2bf9417c91da1ac\CortanaAnimation.gif
+C:\windows\WinSxS\amd64_microsoft-windows-c..riencehost.appxmain_31bf3856ad364e35_10.0.22621.4111_none_e2bf9417c91da1ac\CortanaAnimationJa.gif
+C:\windows\WinSxS\amd64_microsoft-windows-c..riencehost.appxmain_31bf3856ad364e35_10.0.22621.4111_none_e2bf9417c91da1ac\HelloFaceAnimation.gif
+C:\windows\WinSxS\amd64_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_34e75507b760b6ac\alert_lrg.gif
+C:\windows\WinSxS\amd64_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_34e75507b760b6ac\alert_sml.gif
+C:\windows\WinSxS\amd64_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_34e75507b760b6ac\aspx_file.gif
+C:\windows\WinSxS\amd64_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_34e75507b760b6ac\branding_Full2.gif
+C:\windows\WinSxS\amd64_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_34e75507b760b6ac\deselectedTab_1x1.gif
+C:\windows\WinSxS\amd64_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_34e75507b760b6ac\folder.gif
+C:\windows\WinSxS\amd64_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_34e75507b760b6ac\gradient_onBlue.gif
+C:\windows\WinSxS\amd64_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_34e75507b760b6ac\gradient_onWhite.gif
+C:\windows\WinSxS\amd64_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_34e75507b760b6ac\headerGRADIENT_Tall.gif
+C:\windows\WinSxS\amd64_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_34e75507b760b6ac\HelpIcon_solid.gif
+C:\windows\WinSxS\amd64_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_34e75507b760b6ac\image1.gif
+C:\windows\WinSxS\amd64_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_34e75507b760b6ac\image2.gif
+C:\windows\WinSxS\amd64_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_34e75507b760b6ac\requiredBang.gif
+C:\windows\WinSxS\amd64_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_34e75507b760b6ac\selectedTab_1x1.gif
+C:\windows\WinSxS\amd64_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_34e75507b760b6ac\selectedTab_leftCorner.gif
+C:\windows\WinSxS\amd64_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_34e75507b760b6ac\selectedTab_rightCorner.gif
+C:\windows\WinSxS\amd64_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_34e75507b760b6ac\unSelectedTab_leftCorner.gif
+C:\windows\WinSxS\amd64_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_34e75507b760b6ac\unSelectedTab_rightCorner.gif
+C:\windows\WinSxS\amd64_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_34e75507b760b6ac\yellowCORNER.gif
+C:\windows\WinSxS\amd64_userexperience-desktop_31bf3856ad364e35_10.0.22621.4036_none_0c696635e5be7038\CBS\Cortana.UI\Assets\search.gif
+C:\windows\WinSxS\amd64_userexperience-desktop_31bf3856ad364e35_10.0.22621.4036_none_0c696635e5be7038\CBS\media\HelloFaceAnimation.gif
+C:\windows\WinSxS\amd64_userexperience-desktop_31bf3856ad364e35_10.0.22621.4111_none_0c5d079de5c7d956\CBS\Cortana.UI\Assets\search.gif
+C:\windows\WinSxS\amd64_userexperience-desktop_31bf3856ad364e35_10.0.22621.4111_none_0c5d079de5c7d956\CBS\media\HelloFaceAnimation.gif
+C:\windows\WinSxS\x86_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_7c948bdecbdcdfb2\alert_lrg.gif
+C:\windows\WinSxS\x86_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_7c948bdecbdcdfb2\aspx_file.gif
+C:\windows\WinSxS\x86_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_7c948bdecbdcdfb2\branding_Full2.gif
+C:\windows\WinSxS\x86_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_7c948bdecbdcdfb2\deselectedTab_1x1.gif
+C:\windows\WinSxS\x86_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_7c948bdecbdcdfb2\folder.gif
+C:\windows\WinSxS\x86_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_7c948bdecbdcdfb2\gradient_onBlue.gif
+C:\windows\WinSxS\x86_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_7c948bdecbdcdfb2\gradient_onWhite.gif
+C:\windows\WinSxS\x86_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_7c948bdecbdcdfb2\headerGRADIENT_Tall.gif
+C:\windows\WinSxS\x86_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_7c948bdecbdcdfb2\HelpIcon_solid.gif
+C:\windows\WinSxS\x86_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_7c948bdecbdcdfb2\image1.gif
+C:\windows\WinSxS\x86_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_7c948bdecbdcdfb2\image2.gif
+C:\windows\WinSxS\x86_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_7c948bdecbdcdfb2\requiredBang.gif
+C:\windows\WinSxS\x86_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_7c948bdecbdcdfb2\selectedTab_1x1.gif
+C:\windows\WinSxS\x86_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_7c948bdecbdcdfb2\selectedTab_leftCorner.gif
+C:\windows\WinSxS\x86_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_7c948bdecbdcdfb2\selectedTab_rightCorner.gif
+C:\windows\WinSxS\x86_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_7c948bdecbdcdfb2\unSelectedTab_leftCorner.gif
+C:\windows\WinSxS\x86_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_7c948bdecbdcdfb2\unSelectedTab_rightCorner.gif
+C:\windows\WinSxS\x86_netfx4-aspnet_webadmin_images_b03f5f7f11d50a3a_4.0.15912.0_none_7c948bdecbdcdfb2\yellowCORNER.gif
+Скопировано файлов: 94.
+
+D:\>
+
+
+Задание 8
+Microsoft Windows [Version 10.0.22631.4169]
+(c) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+D:\Новая папка>xcopy C:\windows\*.exe D:\WinEx\
+C:\windows\bfsvc.exe
+C:\windows\explorer.exe
+C:\windows\HelpPane.exe
+C:\windows\hh.exe
+C:\windows\regedit.exe
+C:\windows\splwow64.exe
+C:\windows\winhlp32.exe
+C:\windows\write.exe
+Скопировано файлов: 8.
+
+D:\Новая папка>
